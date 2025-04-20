@@ -12,7 +12,7 @@ char display[8][8]={
     {'#','x','#','x','#','x','#','x'},
     {'x','#','x','#','x','#','x','#'},
     {'#','x','#','x','#','x','#','x'}
-},xold,xnew,googoogaga;
+},xold,xnew,pender;
 string pstarter;
 int main(){
     cout << "how to play: type the coordinates of the piece you want to move and the coordinates of where you want to move that piece to separated by a space. (ex.: a3 b4), to take you move the piece to the position of the piece you want to take. you cannot do multiple takes in a single turn.\ntype anything to start: ";
@@ -288,6 +288,6 @@ if (piececountblack==0){
 }else{
     cout << "black wins!!!";
 }
-std::cin >> googoogaga;
+std::cin >> pender;
 return 0;
 }
