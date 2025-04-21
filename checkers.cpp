@@ -33,10 +33,10 @@ int main(){
     xvalold=xold-97;
     xvalnew=xnew-97;
     if(display[yold][xvalold]=='o'){
-        if (xvalold>7||xvalnew>7||yold>7||ynew>7||display[yold][xvalold]!='o'||(display[ynew][xvalnew]!='-'&&display[ynew][xvalnew]!='x')||(abs(ynew-yold)!=1||(abs(xvalnew-xvalold))!=1)){
+        if (xvalold>7||xvalnew>7||yold>7||ynew>7||display[yold][xvalold]!='o'||(display[ynew][xvalnew]!='-'&&display[ynew][xvalnew]!='x'&&display[ynew][xvalnew]!='X')||(abs(ynew-yold)!=1||(abs(xvalnew-xvalold))!=1)){
             cout << "illegal move, fuck you.\n";
             break;
-        }else if (display[ynew][xvalnew]!='x'){
+        }else if (display[ynew][xvalnew]!='x'&&display[ynew][xvalnew]!='X'){
             if (ynew==yold+1){
             display[yold][xvalold]='-';
             display[ynew][xvalnew]='o';
@@ -88,10 +88,10 @@ int main(){
             }
         }
     }else if (display[yold][xvalold]=='O'){
-        if (xvalold>7||xvalnew>7||yold>7||ynew>7||display[yold][xvalold]!='O'||(display[ynew][xvalnew]!='-'&&display[ynew][xvalnew]!='x')||xvalold==xvalnew||yold==ynew){
+        if (xvalold>7||xvalnew>7||yold>7||ynew>7||display[yold][xvalold]!='O'||(display[ynew][xvalnew]!='-'&&display[ynew][xvalnew]!='x'&&display[ynew][xvalnew]!='X')||xvalold==xvalnew||yold==ynew){
             cout << "illegal move, fuck you.\n";
             break;
-        }else if (display[ynew][xvalnew]!='x'){
+        }else if (display[ynew][xvalnew]!='x'&&display[ynew][xvalnew]!='X'){
             display[yold][xvalold]='-';
             display[ynew][xvalnew]='O';
         }else{
@@ -165,10 +165,10 @@ int main(){
     xvalold=xold-97;
     xvalnew=xnew-97;
     if (display[yold][xvalold]=='x'){
-        if (xvalold>7||xvalnew>7||yold>7||ynew>7||display[yold][xvalold]!='x'||(display[ynew][xvalnew]!='-'&&display[ynew][xvalnew]!='o')||(abs(ynew-yold)!=1||(abs(xvalnew-xvalold))!=1)){
+        if (xvalold>7||xvalnew>7||yold>7||ynew>7||display[yold][xvalold]!='x'||(display[ynew][xvalnew]!='-'&&display[ynew][xvalnew]!='o'&&display[ynew][xvalnew]!='O')||(abs(ynew-yold)!=1||(abs(xvalnew-xvalold))!=1)){
              cout << "illegal move, fuck you.\n";
             break;
-        }else if (display[ynew][xvalnew]!='o'){
+        }else if (display[ynew][xvalnew]!='o'&&display[ynew][xvalnew]!='O'){
             if (ynew==yold-1){
                 display[yold][xvalold]='-';
                 display[ynew][xvalnew]='x';
@@ -220,10 +220,10 @@ int main(){
             }
         }
     }else if (display[yold][xvalold]=='X'){
-        if (xvalold>7||xvalnew>7||yold>7||ynew>7||display[yold][xvalold]!='X'||(display[ynew][xvalnew]!='-'&&display[ynew][xvalnew]!='o')||yold==ynew||xvalold==xvalnew){
+        if (xvalold>7||xvalnew>7||yold>7||ynew>7||display[yold][xvalold]!='X'||(display[ynew][xvalnew]!='-'&&display[ynew][xvalnew]!='o'&&display[ynew][xvalnew]!='O')||yold==ynew||xvalold==xvalnew){
             cout << "illegal move, fuck you.\n";
            break;
-       }else if (display[ynew][xvalnew]!='o'){
+       }else if (display[ynew][xvalnew]!='o'&&display[ynew][xvalnew]!='O'){
                display[yold][xvalold]='-';
                display[ynew][xvalnew]='X';
        }else{
